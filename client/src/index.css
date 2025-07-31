@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Bubblegum+Sans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Comic Sans MS', cursive;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-primary-300;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-500 hover:bg-secondary-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-secondary-300;
+  }
+
+  .btn-success {
+    @apply bg-success-500 hover:bg-success-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-success-300;
+  }
+
+  .btn-warning {
+    @apply bg-warning-500 hover:bg-warning-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transform hover:scale-105 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-warning-300;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-xl p-6 border-4 border-primary-200 hover:border-primary-300 transition-all duration-300;
+  }
+
+  .game-card {
+    @apply bg-gradient-to-br from-primary-100 to-secondary-100 rounded-3xl shadow-2xl p-8 border-4 border-primary-300 hover:border-primary-400 transition-all duration-300 transform hover:scale-105;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 border-2 border-primary-300 rounded-xl focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all duration-200 text-lg;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-bronze {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-silver {
+    @apply bg-gray-100 text-gray-800;
+  }
+
+  .badge-gold {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-platinum {
+    @apply bg-purple-100 text-purple-800;
+  }
+
+  .progress-bar {
+    @apply w-full bg-gray-200 rounded-full h-4 overflow-hidden;
+  }
+
+  .progress-fill {
+    @apply h-full bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-500 ease-out;
+  }
+
+  .sparkle {
+    @apply absolute w-2 h-2 bg-yellow-400 rounded-full animate-sparkle;
+  }
+
+  .floating {
+    @apply animate-float;
+  }
+
+  .wiggle {
+    @apply animate-wiggle;
+  }
+
+  .bounce-slow {
+    @apply animate-bounce-slow;
+  }
+
+  .pulse-slow {
+    @apply animate-pulse-slow;
+  }
+
+  .typewriter {
+    @apply overflow-hidden whitespace-nowrap border-r-2 border-primary-500 animate-typewriter;
+  }
+
+  .blink {
+    @apply animate-blink;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .backdrop-blur {
+    backdrop-filter: blur(10px);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
